@@ -193,7 +193,6 @@ app.post('/loggingin', async (req,res) => {
 		console.log("correct password");
 		req.session.authenticated = true;
 		req.session.username = username;
-        req.session.firstName = firstName;
 		req.session.cookie.maxAge = expireTime;
 
 		res.redirect('/');
